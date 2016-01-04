@@ -1,0 +1,63 @@
+<template name="layout">
+	<div class="container-fluid" style="background-color: black">
+		<div class="row" id="navigation">
+			<img src="wudl.jpg" class="col-sm-2 img-responsive visible-sm visible-md visible-lg">
+			<div class="container-fluid col-sm-8" style="margin-top: auto; margin-bottom: auto">
+				<h1 style="text-align: center; color: white; padding-bottom: 30px; padding-top: 20px">Washington Urban Debate League</h1>
+				<p style="color: white; text-align: center"><em>Expanding learning opportunities for Washington area public school students</em></p>
+				<ul class="nav nav-tabs center-block" style="margin-bottom: 5px">
+					<li><a href="/">Home</a></li>
+					<li><a href="/about">About Us</a></li>
+					<li><a href="/programming">Programming</a></li>
+					<li><a href="/teachers">For Teachers</a></li>
+					<li><a href="/students">For Students</a></li>
+					<li><a href="/impact">Impact</a></li>
+					<li><a href="/involve">Get Involved</a></li>
+					<li><a href="/contact">Contact Us</a></li>
+				</ul>
+			</div>
+			<img src="naudl.jpg" class="col-sm-2 img-responsive visible-sm visible-md visible-lg">
+		</div>
+	</div>
+
+	{{>yield url}}
+
+	<div class="container-fluid col-md-12" style="background-color: black">
+		<div class="row">
+			<div class="col-sm-4">
+				<h3>Useful Links</h3>
+				<ul class="list-group">
+					<li class="list-group-item"><a href="#">About Us</a></li>
+					<li class="list-group-item"><a href="#">Impact</a></li>
+					<li class="list-group-item"><a href="#">Get Involved</a></li>
+					<li class="list-group-item"><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<h3>Resources</h3>
+				<ul class="list-group">
+					<li class="list-group-item"><a href="#">Debate</a></li>
+					<li class="list-group-item"><a href="#">Coaching</a></li>
+					<li class="list-group-item"><a href="#">Meeting</a></li>
+					<li class="list-group-item"><a href="#">Topic</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<h3>Donate</h3>
+				<div class="center-block" style="text-align: center">
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_donations">
+					<input type="image" name="submit" border="0" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
+					<img alt="" border="0" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+				</form>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3" style="text-align:center">
+				<p>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 2015 Washington Urban Debate League. All Rights Reserved.</p>
+			</div>
+
+		</div>
+	</div>
+</template>

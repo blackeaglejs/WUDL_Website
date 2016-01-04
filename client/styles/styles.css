@@ -1,0 +1,60 @@
+body {
+	background-color: #F0F8FF;
+}
+
+#navigation {
+	max-height: 200px;
+	width: auto;
+}
+
+.list-group li {
+	background-color: black;
+	text-align: center;
+	border: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+nav img {
+	height: 50px;
+	width: auto;
+}
+h1 {
+	font-size: 40px;
+}
+h3 {
+	text-align: center;
+	color: white;
+}
+
+
+navbar {
+	background-color: black;
+}
+nav {
+	color: black;
+}
+
+
+.white {
+	background-color: white;
+}
+
+.button {
+	border-radius: 10px;
+	color: white;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: auto;
+}
+.medium {
+	padding-top: 45px;
+  height: 150px;
+}
+.container-fluid {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
