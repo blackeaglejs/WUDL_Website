@@ -24,3 +24,10 @@ iron:router
 babrahams:editable-text
 babrahams:editable-text-wysiwyg-bootstrap-3
 fortawesome:fontawesome
+mrt:meteor-nodemailer
+meteorhacks:npm
+
+
+npm-container
+accounts-ui
+accounts-password

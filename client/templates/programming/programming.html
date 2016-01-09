@@ -6,7 +6,12 @@
       </div>
       <div class="col-sm-5">
         <h2 style="text-align: center">Programming</h2>
-        {{> editableText collection='programming' field='content' context=programming options=optionsHelper}}
+        {{#if isAdmin}}
+          {{> editableText collection='programming' field='content' context=programming options=optionsHelper}}
+        {{else}}
+          {{{programming.content}}}
+        {{/if}}
+        
         <br><br>
         <h4>Important Information:</h4>
         <ul id="programmingnav">

@@ -1,3 +1,24 @@
 <template name="contact">
-
+	<div class='well well-lg'>
+		<form id="contact-us" method="GET" action="mailto:hyunraider@yahoo.com" enctype="text/plain">
+			<div class="form-group">
+		        <label for="inputName">Name</label>
+		        <input type="text" class="form-control" id="inputName" placeholder="Name">
+		    </div>
+		    <div class="form-group">
+		        <label for="inputPurpose">Purpose</label>
+		        <input type="text" class="form-control" id="inputPurpose" placeholder="Purpose">
+		    </div>
+		    <div class="form-group">
+		        <label for="inputEmail">Email</label>
+		        <input type="text" class="form-control" id="inputEmail" placeholder="">
+		    </div>
+		    <div class="form-group">
+		        <label for="inputSubject">Subject</label>
+		        <textarea type="text" class="form-control" id="inputSubject" placeholder="Type content here"></textarea>
+		    </div>
+		    <button type="submit" class="btn btn-default">Submit</button>
+		    <input type='hidden' name='body' id='bodyStuff'/>
+		</form>
+	</div>	
 </template>

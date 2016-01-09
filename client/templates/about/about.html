@@ -2,7 +2,12 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        {{> editableText collection='about' field='content' context=about options=optionsHelper}}
+        <h2>About Us</h2>
+        {{#if isAdmin}}
+          {{> editableText collection='about' field='content' context=about options=optionsHelper}}
+        {{else}}
+          {{{about.content}}}
+        {{/if}}
       </div>
     </div>
     <div class="row" style="padding-bottom: 10px">

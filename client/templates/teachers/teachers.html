@@ -5,7 +5,11 @@
         <h2 style="text-align: center">For Teachers</h2>
         <div class="row" style="padding-top: 10px">
           <div class="container-fluid col-sm-7">
-            {{> editableText collection='teachers' field='content' context=teachers options=optionsHelper}}
+            {{#if isAdmin}}
+              {{> editableText collection='teachers' field='content' context=teachers options=optionsHelper}}
+            {{else}}
+              {{{teachers.content}}}
+            {{/if}}
           </div>
           <div class="container col-sm-5">
             <img src="teacher.jpg" class="img img-responsive" />
