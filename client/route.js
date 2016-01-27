@@ -9,6 +9,8 @@ Router.configure({
 		'involve': {to: 'involve'},
 		'students': {to: 'students'},
 		'teachers': {to: 'teachers'},
+		'meet-the-team': {to: 'meet-the-team'},
+		'schedule': {to: 'schedule'}
 	}
 });
 

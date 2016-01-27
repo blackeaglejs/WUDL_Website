@@ -1,3 +1,102 @@
 <template name="impact">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-7 col-sm-offset-2" id="main">
+				<h2>Impact</h2>
+				{{#if isAdmin}}
+              		{{> editableText collection='impact' field='content' context=impact options=optionsHelper}}
+            	{{else}}
+              		{{{impact.content}}}
+            	{{/if}}
 
+            	<h3 style="color: black; text-align: left" class="col-sm-offset-1">Graduation Rate</h3>
+            	<div class="row">
+            		<div class="col-sm-5 col-sm-offset-1">
+            			{{#if isAdmin}}
+              				{{> editableText collection='impactgraduation' field='content' context=impactgraduation options=optionsHelper}}
+            			{{else}}
+              				{{{impactgraduation.content}}}
+            			{{/if}}
+            		</div>
+            		<div class="col-sm-5">Chartssss</div>
+            	</div>
+            	<h3 style="color: black; text-align: left;" class="col-sm-offset-1">Grades</h3>
+            	<div class="row">
+            		<div class="col-sm-5 col-sm-offset-1">
+            			{{#if isAdmin}}
+              				{{> editableText collection='impactgrades' field='content' context=impactgrades options=optionsHelper}}
+            			{{else}}
+              				{{{impactgrades.content}}}
+            			{{/if}}
+            		</div>
+            		<div class="col-sm-5">Chartssss</div>
+            	</div>
+            	<h3 style="color: black; text-align: left;" class="col-sm-offset-1">Test Scores</h3>
+            	<div class="row">
+            		<div class="col-sm-5 col-sm-offset-1">
+            			{{#if isAdmin}}
+              				{{> editableText collection='impactscores' field='content' context=impactscores options=optionsHelper}}
+            			{{else}}
+              				{{{impactscores.content}}}
+            			{{/if}}
+            		</div>
+            		<div class="col-sm-5">Chartssss</div>
+            	</div>
+            	<h3 style="color: black; text-align: left;" class="col-sm-offset-1">College Attendance</h3>
+            	<div class="row">
+            		<div class="col-sm-5 col-sm-offset-1">
+            			{{#if isAdmin}}
+              				{{> editableText collection='impactattendance' field='content' context=impactattendance options=optionsHelper}}
+            			{{else}}
+              				{{{impactattendance.content}}}
+            			{{/if}}
+            		</div>
+            		<div class="col-sm-5">Chartssss</div>
+            	</div>
+            	<h3 style="color: black; text-align: left" class="col-sm-offset-1">College Graduation</h3>
+            	<div class="row">
+            		<div class="col-sm-5 col-sm-offset-1">
+            			{{#if isAdmin}}
+              				{{> editableText collection='impactcollege' field='content' context=impactcollege options=optionsHelper}}
+            			{{else}}
+              				{{{impactcollege.content}}}
+            			{{/if}}
+            		</div>
+            		<div class="col-sm-5">Chartssss</div>
+            	</div>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-sm-10 col-sm-offset-1" style="height: 100px; background-color: black;"></div>
+                </div>
+			</div>
+			<div class="col-sm-3" style="background-color: black; color: white; padding-top: 5px; height: 100%;" id="side">
+			{{#each impactquote}}
+				{{>displayquote}}
+			{{/each}}
+			{{#if isAdmin}}
+				{{>addquote}}
+			{{/if}}
+			</div>
+		</div>
+	</div>
+</template>
+<template name="addquote">
+	<div class="well" style="color: black;">
+		<form>
+			<div class="form-group">
+				<label for="inputQuote">Quote</label>
+    			<input type="text" class="form-control" id="inputQuote" placeholder="quote">
+			</div>
+			<div class="form-group">
+				<label for="inputAuthor">Author</label>
+    			<input type="text" class="form-control" id="inputAuthor" placeholder="author">
+			</div>
+			<button type="submit" class="btn btn-default">Add To List</button>
+		</form>
+	</div>
+</template>
+<template name="displayquote">
+	<blockquote>
+		<p>{{quote}}</p>
+		<footer>{{author}}</footer>
+	</blockquote>
 </template>

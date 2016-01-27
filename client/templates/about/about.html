@@ -12,15 +12,21 @@
     </div>
     <div class="row" style="padding-bottom: 10px">
       <div class="col-sm-4 col-sm-offset-2">
-        <a href="#"><div class="container button medium" id="meettheteam">
+        <a href="/meet-the-team"><div class="container button medium" id="meettheteam">
           Meet the team
         </div></a>
       </div>
+      {{#if isAdmin}}
+      <button>Change Pic</button>
+      {{/if}}
       <div class="col-sm-4">
         <a href="#"><div class="container button medium" style="background-image: url('capitol.jpg')">
           The UDL Model
         </div></a>
       </div>
+      {{#if isAdmin}}
+      <button>Change Pic</button>
+      {{/if}}
     </div>
   </div>
 </template>

@@ -13,13 +13,24 @@
         {{/if}}
         
         <br><br>
+        {{>pictureupload}}
         <h4>Important Information:</h4>
         <ul id="programmingnav">
           <li><a href="#">Results</a></li>
-          <li><a href="#">Schedule</a></li>
+          <li><a href="/schedule">Schedule</a></li>
           <li><a href="#">About Tournaments</a></li>
           <li><a href="#">Camp</a></li>
         </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="schedule">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2" style="transform: scale(1, 1)">
+        <iframe src="https://calendar.google.com/calendar/embed?src=53nks9fk11a5nnip7akgbstj78%40group.calendar.google.com&ctz=America/New_York" style="border: 0; width: 100%" width="1200" height="800" frameborder="0" scrolling="no"></iframe>
       </div>
     </div>
   </div>
