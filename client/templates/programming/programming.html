@@ -18,8 +18,8 @@
         <ul id="programmingnav">
           <li><a href="#">Results</a></li>
           <li><a href="/schedule">Schedule</a></li>
-          <li><a href="#">About Tournaments</a></li>
-          <li><a href="#">Camp</a></li>
+          <li><a href="/tournaments">About Tournaments</a></li>
+          <li><a href="/camp">Camp</a></li>
         </ul>
       </div>
     </div>
@@ -28,6 +28,16 @@
 
 <template name="schedule">
   <div class="container-fluid">
+    <div class="row" style="margin-bottom: 5px;">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Schedule</h2>
+        {{#if isAdmin}}
+          {{> editableText collection='schedule' field='content' context=schedule options=optionsHelper}}
+        {{else}}
+          {{{schedule.content}}}
+        {{/if}}
+      </div>
+    </div>
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2" style="transform: scale(1, 1)">
         <iframe src="https://calendar.google.com/calendar/embed?src=53nks9fk11a5nnip7akgbstj78%40group.calendar.google.com&ctz=America/New_York" style="border: 0; width: 100%" width="1200" height="800" frameborder="0" scrolling="no"></iframe>
@@ -35,3 +45,95 @@
     </div>
   </div>
 </template>
+
+<template name="tournaments">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h2>WUDL Tournaments</h2>
+        <br>
+        <div class="row">
+          <div class="col-sm-5">
+            <img src="tournament2.jpg" class="img img-responsive">
+          </div>
+          <div class="col-sm-7" style="line-height: 30px;">
+            {{#if isAdmin}}
+              {{> editableText collection='tournaments1' field='content' context=tournaments1 options=optionsHelper}}
+            {{else}}
+              {{{tournaments1.content}}}
+            {{/if}}
+          </div>
+        </div>
+        <br>
+        <div class="row" style="line-height: 40px;">
+          {{#if isAdmin}}
+              {{> editableText collection='tournaments2' field='content' context=tournaments2 options=optionsHelper}}
+            {{else}}
+              {{{tournaments2.content}}}
+            {{/if}}
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-7" style="line-height: 30px;">
+            {{#if isAdmin}}
+              {{> editableText collection='tournaments3' field='content' context=tournaments3 options=optionsHelper}}
+            {{else}}
+              {{{tournaments3.content}}}
+            {{/if}}
+          </div>
+          <div class="col-sm-5">
+            <img src="tournament1.jpg" class='img img-responsive'>
+          </div>
+        </div>
+        <br>
+        <a href="/schedule" class="center-block">Click here for tournament schedule</a>
+        <br>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="camp">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2 style="text-align: center">WUDL Camp</h2>
+        <br>
+        <img src="camp.jpg" class="img img-responsive">
+        <br>
+        <h3 style="color: black; text-align: center">Camp Overview</h3>
+        {{#if isAdmin}}
+          {{> editableText collection='camp' field='content' context=camp options=optionsHelper}}
+        {{else}}
+          {{{camp.content}}}
+        {{/if}}
+        <br>
+        <h3 style="color: black; text-align: center">Application Information</h3>
+        <a href="#">Students</a><br>
+        <a href="#">Faculty</a>
+        <br>
+        {{#if isAdmin}}
+          {{> editableText collection='campapp' field='content' context=campapp options=optionsHelper}}
+        {{else}}
+          {{{campapp.content}}}
+        {{/if}}
+        <br>
+        <h3 style="color: black; text-align: center">Tentative Schedule</h3>
+        {{#if isAdmin}}
+          {{> editableText collection='campschedule' field='content' context=campschedule options=optionsHelper}}
+        {{else}}
+          {{{campschedule.content}}}
+        {{/if}}
+        <br>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+
+
+
+
+
+

@@ -52,6 +52,50 @@ Template.about.helpers({
 	
 });
 
+Template.schedule.helpers({
+	schedule: function () {
+		return Schedule.findOne({});
+	}
+});
+
+Template.tournaments.helpers({
+	tournaments1: function () {
+		return Tournaments1.findOne({});
+	},
+	tournaments2: function () {
+		return Tournaments2.findOne({});
+	},
+	tournaments3: function () {
+		return Tournaments3.findOne({});
+	}
+});
+
+Template.udlmodel.helpers({
+	udlmodel: function () {
+		return UDLModel.findOne({});
+	},
+	udldata: function() {
+		return UDLData.findOne({});
+	},
+	udlgoals: function() {
+		return UDLGoals.findOne({});
+	},
+	udldebate: function() {
+		return UDLDebate.findOne({});
+	}
+});
+
+Template.camp.helpers({
+	camp: function () {
+		return Camp.findOne({});
+	},
+	campapp: function() {
+		return Campapp.findOne({});
+	},
+	campschedule: function() {
+		return Campschedule.findOne({});
+	}
+});
 Template.registerHelper('optionsHelper', function(){
 	return {
 			wysiwyg: true,
