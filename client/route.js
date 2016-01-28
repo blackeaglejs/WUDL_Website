@@ -10,7 +10,10 @@ Router.configure({
 		'students': {to: 'students'},
 		'teachers': {to: 'teachers'},
 		'meet-the-team': {to: 'meet-the-team'},
-		'schedule': {to: 'schedule'}
+		'schedule': {to: 'schedule'},
+		'tournaments': {to: 'tournaments'},
+		'udlmodel': {to: 'udlmodel'},
+		'camp': {to: 'camp'}
 	}
 });
 

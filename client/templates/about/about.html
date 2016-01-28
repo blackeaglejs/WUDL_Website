@@ -20,13 +20,51 @@
       <button>Change Pic</button>
       {{/if}}
       <div class="col-sm-4">
-        <a href="#"><div class="container button medium" style="background-image: url('capitol.jpg')">
+        <a href="/udlmodel"><div class="container button medium" style="background-image: url('capitol.jpg')">
           The UDL Model
         </div></a>
       </div>
       {{#if isAdmin}}
       <button>Change Pic</button>
       {{/if}}
+    </div>
+  </div>
+</template>
+
+<template name="udlmodel">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2 style="text-align: center">The UDL Model</h2>
+        {{#if isAdmin}}
+          {{> editableText collection='udlmodel' field='content' context=udlmodel options=optionsHelper}}
+        {{else}}
+          {{{udlmodel.content}}}
+        {{/if}}
+        <img src="udlmodel.png" class="img img-responsive full-width">
+        <br>
+        <h3 style="color: black;">Data Driven Model</h3>
+        {{#if isAdmin}}
+          {{> editableText collection='udldata' field='content' context=udldata options=optionsHelper}}
+        {{else}}
+          {{{udldata.content}}}
+        {{/if}}
+        <br>
+        <h3 style="color: black;">Why Policy Debate?</h3>
+        {{#if isAdmin}}
+          {{> editableText collection='udldebate' field='content' context=udldebate options=optionsHelper}}
+        {{else}}
+          {{{udldebate.content}}}
+        {{/if}}
+        <br>
+        <h3 style="color: black;">Goals</h3>
+        {{#if isAdmin}}
+          {{> editableText collection='udlgoals' field='content' context=udlgoals options=optionsHelper}}
+        {{else}}
+          {{{udlgoals.content}}}
+        {{/if}}
+        <br>
+      </div>
     </div>
   </div>
 </template>

@@ -1,24 +1,30 @@
 <template name="contact">
-	<div class='well well-lg'>
-		<form id="contact-us" method="GET" action="mailto:hyunraider@yahoo.com" enctype="text/plain">
-			<div class="form-group">
-		        <label for="inputName">Name</label>
-		        <input type="text" class="form-control" id="inputName" placeholder="Name">
-		    </div>
-		    <div class="form-group">
-		        <label for="inputPurpose">Purpose</label>
-		        <input type="text" class="form-control" id="inputPurpose" placeholder="Purpose">
-		    </div>
-		    <div class="form-group">
-		        <label for="inputEmail">Email</label>
-		        <input type="text" class="form-control" id="inputEmail" placeholder="">
-		    </div>
-		    <div class="form-group">
-		        <label for="inputSubject">Subject</label>
-		        <textarea type="text" class="form-control" id="inputSubject" placeholder="Type content here"></textarea>
-		    </div>
-		    <button type="submit" class="btn btn-default">Submit</button>
-		    <input type='hidden' name='body' id='bodyStuff'/>
-		</form>
-	</div>	
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<h2>Contact Us</h2>
+			<div class='well well-lg'>
+				<form id="contact-us" method="GET" action="mailto:hyunraider@yahoo.com" enctype="text/plain">
+					<div class="form-group">
+				        <label for="inputName">Name</label>
+				        <input type="text" class="form-control" id="inputName" placeholder="Name">
+				    </div>
+				    <div class="form-group">
+				        <label for="inputPurpose">Purpose</label>
+				        <input type="text" class="form-control" id="inputPurpose" placeholder="Purpose">
+				    </div>
+				    <div class="form-group">
+				        <label for="inputEmail">Email</label>
+				        <input type="text" class="form-control" id="inputEmail" placeholder="">
+				    </div>
+				    <div class="form-group">
+				        <label for="inputSubject">Subject</label>
+				        <textarea type="text" class="form-control" id="inputSubject" placeholder="Type content here"></textarea>
+				    </div>
+				    <button type="submit" class="btn btn-default">Submit</button>
+				    <input type='hidden' name='body' id='bodyStuff'/>
+				</form>
+			</div>	
+		</div>
+	</div>
+	
 </template>
