@@ -1,7 +1,7 @@
 Cloudinary.config({
-  cloud_name: 'hyunraider',
-  api_key: '985637723259571',
-  api_secret: 'yrROWfcKrsRkxDIp84qGWMsOZqI'
+  cloud_name: 'dvztnrdqc',
+  api_key: '992122492835359',
+  api_secret: 'kTd_5V6DXe5ti9mLxYvV9lTvoAM'
 });
 
 Meteor.startup(function(){
