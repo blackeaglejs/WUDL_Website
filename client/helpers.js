@@ -10,6 +10,13 @@ Template.teachers.helpers({
 		return Teachers.findOne({});
 	}
 });
+
+Template.professional_development.helpers({
+	professional_development: function(){
+		return professional_development.findOne({})
+	}
+})
+
 Template.programming.helpers({
 	programming: function(){
 		return Programming.findOne({});
