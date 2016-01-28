@@ -11,7 +11,7 @@ Router.configure({
 		'teachers': {to: 'teachers'},
 		'meet-the-team': {to: 'meet-the-team'},
 		'schedule': {to: 'schedule'},
-		'professional_development': {to: 'professional_development'}
+		'ProfessionalDevelopment': {to: 'ProfessionalDevelopment'}
 	}
 });
 

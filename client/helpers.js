@@ -13,7 +13,7 @@ Template.teachers.helpers({
 
 Template.professional_development.helpers({
 	professional_development: function(){
-		return professional_development.findOne({})
+		return professional_development.findOne({});
 	}
 })
 

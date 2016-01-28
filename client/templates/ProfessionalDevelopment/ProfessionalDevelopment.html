@@ -1,25 +1,21 @@
-<template name="teachers">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-7 col-sm-offset-2" id='main'>
-        <h2 style="text-align: center">For Teachers</h2>
-        <div class="row" style="padding-top: 10px">
-          <div class="container-fluid col-sm-7">
-            {{#if isAdmin}}
-              {{> editableText collection='teachers' field='content' context=teachers options=optionsHelper}}
-            {{else}}
-              {{{teachers.content}}}
-            {{/if}}
-          </div>
-          <div class="container col-sm-5">
-            <img src="teacher.jpg" class="img img-responsive" />
-          </div>
-          <div class="container col-sm-12">
+<template name="ProfessionalDevelopment">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7 col-sm-offset-2" id='main'>
+				<h2 style="text-align: center">Professional Development</h2>
+				<div class="container-fluid col-sm-7">
+            		{{#if isAdmin}}
+              			{{> editableText collection='professional_development' field='content' context=professional_development options=optionsHelper}}
+            		{{else}}
+              			{{{professional_development.content}}}
+            		{{/if}}
+          		</div>
+          		<div class="container col-sm-12">
             <h4 style="text-align: center">Feeling Lost?</h4>
             <h5 style="text-align: center">Check out our resources!</h5>
           </div>
           <div class="col-sm-4" style="padding-top: 5px; padding-bottom: 5px">
-            <a href="/ProfessionalDevelopment"><div class="container button medium" style="background-image: url('professional dev.jpg')">
+            <a href="/professional_development"><div class="container button medium" style="background-image: url('professional dev.jpg')">
               Professional Development
             </div></a>
           </div>
@@ -48,20 +44,7 @@
               Starting a Team
             </div></a>
           </div>
-        </div>
-        <br>
-      </div>
-      <div class="col-sm-3 pull-right" style="background-color: black; padding-bottom: 5px;" id="side">
-        <h3 style="text-decoration: underline">Files</h3>
-        <ul>
-          <li><span class="glyphicon glyphicon-file"></span>Debate basics 1</li>
-          <li><span class="glyphicon glyphicon-file"></span>Debate basics 2</li>
-          <li><span class="glyphicon glyphicon-file"></span>Debate basics 3</li>
-          <li><span class="glyphicon glyphicon-file"></span>Intro to DAs</li>
-          <li><span class="glyphicon glyphicon-file"></span>DA advanced Strategy</li>
-          <li><span class="glyphicon glyphicon-file"></span>Intro to Ks</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+			</div>
+		</div>
+	</div>
 </template>
