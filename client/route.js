@@ -14,6 +14,7 @@ Router.configure({
 		'tournaments': {to: 'tournaments'},
 		'udlmodel': {to: 'udlmodel'},
 		'camp': {to: 'camp'}
+		'ProfessionalDevelopment': {to: 'ProfessionalDevelopment'}
 	}
 });
 
