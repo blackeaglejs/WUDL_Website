@@ -13,7 +13,7 @@ Router.configure({
 		'schedule': {to: 'schedule'},
 		'tournaments': {to: 'tournaments'},
 		'udlmodel': {to: 'udlmodel'},
-		'camp': {to: 'camp'}
+		'camp': {to: 'camp'},
 		'ProfessionalDevelopment': {to: 'ProfessionalDevelopment'}
 	}
 });
