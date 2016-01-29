@@ -9,7 +9,7 @@ Router.configure({
 		'involve': {to: 'involve'},
 		'students': {to: 'students'},
 		'teachers': {to: 'teachers'},
-		'meet-the-team': {to: 'meet-the-team'},
+		'meettheteam': {to: 'meettheteam'},
 		'schedule': {to: 'schedule'},
 		'tournaments': {to: 'tournaments'},
 		'udlmodel': {to: 'udlmodel'},
