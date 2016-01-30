@@ -1,7 +1,71 @@
 <template name="involve">
-  <div class="row">
-    <div class="col-sm-8 col-sm-offset-2" style="transform: scale(1, 1)">
-      <iframe src="https://docs.google.com/forms/d/1gHfoU6szUexdZEzaHGwZxPE5hcObpeoQS1Vf6dA4gnw/viewform?embedded=true" style="width: 100%" width="1200" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-    </div>
+  <div class="container">
+  	<div class="row">
+  		<div class="col-sm-10 col-sm-offset-1">
+  			<h2>Get Involved</h2>
+  			{{#if isAdmin}}
+		        {{> editableText collection='involve1' field='content' context=involve1 options=optionsHelper}}
+		    {{else}}
+		        {{{involve1.content}}}
+		    {{/if}}
+		    <br>
+		    <h4 style="color: black"><a href="/involvecoaching">Debate Coaching</a></h4>
+		    {{#if isAdmin}}
+		        {{> editableText collection='involve2' field='content' context=involve2 options=optionsHelper}}
+		    {{else}}
+		        {{{involve2.content}}}
+		    {{/if}}
+		    <br>
+		    <h4 style="color: black"><a href="/involvejudging">Debate Judging</a></h4>
+		    {{#if isAdmin}}
+		        {{> editableText collection='involve3' field='content' context=involve3 options=optionsHelper}}
+		    {{else}}
+		        {{{involve3.content}}}
+		    {{/if}}
+		    <br>
+		    <h4 style="color: black"><a href="/involveexplore">Explore other debate activities</a></h4>
+		    {{#if isAdmin}}
+		        {{> editableText collection='involve4' field='content' context=involve4 options=optionsHelper}}
+		    {{else}}
+		        {{{involve4.content}}}
+		    {{/if}}
+		    <br>
+		    <h4 style="color: black"><a href="/involvedonor">Be a Donor!</a></h4>
+		    {{#if isAdmin}}
+		        {{> editableText collection='involve5' field='content' context=involve5 options=optionsHelper}}
+		    {{else}}
+		        {{{involve5.content}}}
+		    {{/if}}
+		    <br>
+		    {{> involvefooter}}
+		    <br>
+  		</div>
+  	</div>
   </div>
+</template>
+
+<template name="involvecoaching">
+	...
+</template>
+
+<template name="involvejudging">
+	...
+</template>
+
+<template name="involveexplore">
+	...
+</template>
+
+<template name="involvedonor">
+	...
+</template>
+
+<template name="involvefooter">
+	<h5>Volunteer Policies</h5>
+	{{#if isAdmin}}
+		{{> editableText collection='volunteerpolicies' field='content' context=volunteerpolicies options=optionsHelper}}
+	{{else}}
+		{{{volunteerpolicies.content}}}
+	{{/if}}
+	<br>
 </template>

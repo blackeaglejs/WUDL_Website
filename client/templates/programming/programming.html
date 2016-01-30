@@ -2,7 +2,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-3 col-sm-offset-2">
-        <img src="programming.jpg" alt="" class="img img-responsive"/>
+        <img src="{{c.url "programming"}}" alt="" class="img img-responsive" id="programming"/>
+        {{> pictureupload}}
       </div>
       <div class="col-sm-5">
         <h2 style="text-align: center">Programming</h2>
@@ -13,7 +14,6 @@
         {{/if}}
         
         <br><br>
-        {{>pictureupload}}
         <h4>Important Information:</h4>
         <ul id="programmingnav">
           <li><a href="#">Results</a></li>

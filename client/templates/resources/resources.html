@@ -1,0 +1,86 @@
+<template name="topicresources">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h2>Topic Education</h2>
+				{{#if isAdmin}}
+		          {{> editableText collection='topic1' field='content' context=topic1 options=optionsHelper}}
+		        {{else}}
+		          {{{topic1.content}}}
+		        {{/if}}
+		        <img src="{{c.url "topic"}}" class="img img-responsive" id="topic">
+		        <br>
+		        {{#if isAdmin}}
+		          {{> editableText collection='topic2' field='content' context=topic2 options=optionsHelper}}
+		        {{else}}
+		          {{{topic2.content}}}
+		        {{/if}}
+		        <br>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="evidence">
+	...
+</template>
+
+<template name="startteam">
+	<div class="container">
+		<div class="col-sm-8 col-sm-offset-2">
+			<h2 style="text-align: center">Building a Policy Debate Program</h2>
+			{{#if isAdmin}}
+	          {{> editableText collection='startteam1' field='content' context=startteam1 options=optionsHelper}}
+	        {{else}}
+	          {{{startteam1.content}}}
+	        {{/if}}
+	        <div class="row">
+	        	<h3 style="color: black; text-align: center">For Students</h3>
+	        	<div class="col-sm-4">
+	        		<img src="{{c.url "team-students"}}" class="img img-responsive" id="team-student">
+	        	</div>
+	        	<div class="col-sm-8">
+	        	{{#if isAdmin}}
+		          {{> editableText collection='startteam2' field='content' context=startteam2 options=optionsHelper}}
+		        {{else}}
+		          {{{startteam2.content}}}
+		        {{/if}}
+	        	</div>
+	        </div>
+
+	        <div class="row">
+	        	<h3 style="color: black; text-align: center">For Faculty</h3>
+	        	<div class="col-sm-4">
+	        		<img src="{{c.url "team-faculty"}}" class="img img-responsive" id="team-faculty">
+	        	</div>
+	        	<div class="col-sm-8">
+	        	{{#if isAdmin}}
+		          {{> editableText collection='startteam3' field='content' context=startteam3 options=optionsHelper}}
+		        {{else}}
+		          {{{startteam3.content}}}
+		        {{/if}}
+	        	</div>
+	        </div>
+
+	        <div class="row">
+	        	<h3 style="color: black; text-align: center">For Administrators</h3>
+	        	<div class="col-sm-4">
+	        		<img src="{{c.url "team-admin"}}" class="img img-responsive" id="team-admin">
+	        	</div>
+	        	<div class="col-sm-8">
+	        	{{#if isAdmin}}
+		          {{> editableText collection='startteam4' field='content' context=startteam4 options=optionsHelper}}
+		        {{else}}
+		          {{{startteam4.content}}}
+		        {{/if}}
+	        	</div>
+	        </div>
+	        <br>
+		</div>
+		<br>
+	</div>
+</template>
+
+<template name="meetingresources">
+	...
+</template>

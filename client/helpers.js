@@ -1,17 +1,36 @@
 Template.pictureupload.events({
-	'click button': function (e, t) {
+	'submit form': function (e, t) {
 		e.preventDefault();
-		$(event.target).next().next().css("background", 'red');
+		var name = $(e.target).prev().attr('id');
+		var files = [];
+		var file = $('#userimage')[0].files[0];
+		files.push(file);
+
+		Cloudinary.delete(name, function(result){
+			console.log(result);
+		});
+
+		Cloudinary.uploader.upload(files, {
+	      public_id: name
+	    }, function(result){console.log(result);});
 	}
 });
 
+Template.topicresources.helpers({
+	topic1: function () {
+		return Topic1.findOne({});
+	},
+	topic2: function () {
+		return Topic2.findOne({});
+	}
+});
 Template.teachers.helpers({
 	teachers: function(){
 		return Teachers.findOne({});
 	}
 });
 
-Template.professional_development.helpers({
+Template.ProfessionalDevelopment.helpers({
 	professional_development: function(){
 		return professional_development.findOne({});
 	}
@@ -22,6 +41,7 @@ Template.programming.helpers({
 		return Programming.findOne({});
 	}
 });
+
 Template.impact.helpers({
 	impact: function(){
 		return Impact.findOne({});
@@ -85,6 +105,21 @@ Template.udlmodel.helpers({
 	}
 });
 
+Template.startteam.helpers({
+	startteam1: function () {
+		return Startteam1.findOne({});
+	},
+	startteam2: function () {
+		return Startteam2.findOne({});
+	},
+	startteam3: function () {
+		return Startteam3.findOne({});
+	},
+	startteam4: function () {
+		return Startteam4.findOne({});
+	}
+});
+
 Template.camp.helpers({
 	camp: function () {
 		return Camp.findOne({});
@@ -94,6 +129,30 @@ Template.camp.helpers({
 	},
 	campschedule: function() {
 		return Campschedule.findOne({});
+	}
+});
+
+Template.involve.helpers({
+	involve1: function () {
+		return Involve1.findOne({});
+	},
+	involve2: function () {
+		return Involve2.findOne({});
+	},
+	involve3: function () {
+		return Involve3.findOne({});
+	},
+	involve4: function () {
+		return Involve4.findOne({});
+	},
+	involve5: function () {
+		return Involve5.findOne({});
+	},
+});
+
+Template.involvefooter.helpers({
+	volunteerpolicies: function () {
+		return Volunteerpolicies.findOne({});
 	}
 });
 Template.registerHelper('optionsHelper', function(){
