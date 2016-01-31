@@ -34,3 +34,11 @@ accounts-password
 lepozepo:cloudinary
 email
 summernote:summernote
+tomi:upload-server
+tomi:upload-jquery
+semantic:ui
+flemay:less-autoprefixer
+cfs:standard-packages
+cfs:gridfs
+cfs:filesystem
+cfs:dropbox

@@ -1,3 +1,41 @@
+//Setting up CollectionFS
+
+var dropboxStore = new FS.Store.Dropbox("files", {
+  key: "o0mx8wpdv30ushe",
+  secret: "5zz4g0mv8397yad",
+  token: "6TaHAQONRxkAAAAAAAAAn-RwJYnRtO1IqkXniBFLwkO-J-7abvTyn48rqa6UB5CJ", // Don’t share your access token with anyone.
+  folder: "WUDLText", //optional, which folder (key prefix) to use 
+});
+
+var dropboxStore2 = new FS.Store.Dropbox("files2", {
+  key: "o0mx8wpdv30ushe",
+  secret: "5zz4g0mv8397yad",
+  token: "6TaHAQONRxkAAAAAAAAAn-RwJYnRtO1IqkXniBFLwkO-J-7abvTyn48rqa6UB5CJ", // Don’t share your access token with anyone.
+  folder: "WUDLText", //optional, which folder (key prefix) to use 
+});
+
+var dropboxStore3 = new FS.Store.Dropbox("files3", {
+  key: "o0mx8wpdv30ushe",
+  secret: "5zz4g0mv8397yad",
+  token: "6TaHAQONRxkAAAAAAAAAn-RwJYnRtO1IqkXniBFLwkO-J-7abvTyn48rqa6UB5CJ", // Don’t share your access token with anyone.
+  folder: "WUDLText", //optional, which folder (key prefix) to use 
+});
+
+//This is The Coaching Resource
+Files = new FS.Collection("files", {
+  stores: [dropboxStore]
+});
+
+MeetingResource = new FS.Collection("files2", {
+	stores: [dropboxStore2]
+});
+
+Teacherss = new FS.Collection("files3", {
+	stores: [dropboxStore3]
+})
+
+
+//Normal Mongo DBs
 Members = new Mongo.Collection('members');
 
 Teachers = new Mongo.Collection('teachers');
@@ -43,3 +81,18 @@ Volunteerpolicies = new Mongo.Collection('volunteerpolicies');
 
 Topic1 = new Mongo.Collection('topic1');
 Topic2 = new Mongo.Collection('topic2');
+
+Coaching = new Mongo.Collection('coaching');
+
+Profdev = new Mongo.Collection('profdev');
+
+Pdebate1 = new Mongo.Collection('pdebate1');
+
+Evidence = new Mongo.Collection('evidence');
+Evidence2 = new Mongo.Collection('evidence2');
+
+Meeting = new Mongo.Collection('meeting');
+
+
+
+

@@ -19,12 +19,12 @@
             <h5 style="text-align: center">Check out our resources!</h5>
           </div>
           <div class="col-sm-4" style="padding-top: 5px; padding-bottom: 5px">
-            <a href="/ProfessionalDevelopment"><div class="container button medium" style="background-image: url('professional dev.jpg')">
+            <a href="/professionaldevelopment"><div class="container button medium" style="background-image: url('professional dev.jpg')">
               Professional Development
             </div></a>
           </div>
           <div class="col-sm-4" style="padding-top: 5px; padding-bottom: 5px">
-            <a href="#"><div class="container button medium" style="background-image: url('coaching resources.jpg')">
+            <a href="/coachingresources"><div class="container button medium" style="background-image: url('coaching resources.jpg')">
               Coaching Resources
             </div></a>
           </div>
@@ -34,12 +34,12 @@
             </div></a>
           </div>
           <div class="col-sm-4" style="padding-top: 5px; padding-bottom: 5px">
-            <a href="#"><div class="container button medium" style="background-image: url('evidence zone.JPG')">
+            <a href="/evidence"><div class="container button medium" style="background-image: url('evidence zone.JPG')">
               Evidence Zone
             </div></a>
           </div>
           <div class="col-sm-4" style="padding-top: 5px; padding-bottom: 5px">
-            <a href="#"><div class="container button medium" style="background-image: url('meeting resources.jpg')">
+            <a href="/meeting"><div class="container button medium" style="background-image: url('meeting resources.jpg')">
               Meeting Resources
             </div></a>
           </div>
@@ -53,13 +53,13 @@
       </div>
       <div class="col-sm-3 pull-right" style="background-color: black; padding-bottom: 5px;" id="side">
         <h3 style="text-decoration: underline">Files</h3>
-        <ul>
-          <li><span class="glyphicon glyphicon-file"></span>Debate basics 1</li>
-          <li><span class="glyphicon glyphicon-file"></span>Debate basics 2</li>
-          <li><span class="glyphicon glyphicon-file"></span>Debate basics 3</li>
-          <li><span class="glyphicon glyphicon-file"></span>Intro to DAs</li>
-          <li><span class="glyphicon glyphicon-file"></span>DA advanced Strategy</li>
-          <li><span class="glyphicon glyphicon-file"></span>Intro to Ks</li>
+        {{#if isAdmin}}
+          {{> fileuploadteacher}}
+        {{/if}}
+        <ul style="color: white;">
+          {{#each teacherss}}
+                <li><span class="glyphicon glyphicon-file"><a href="{{url download=true}}" style="color: white;">{{name}}</a></span></li>
+          {{/each}}
         </ul>
       </div>
     </div>

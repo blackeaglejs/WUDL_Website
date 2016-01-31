@@ -13,6 +13,11 @@ body {
 	border: none;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	margin: 0px;
+}
+
+.list-group {
+	margin-left: 0px;
 }
 nav img {
 	height: 50px;

@@ -4,7 +4,33 @@ Cloudinary.config({
   api_secret: 'kTd_5V6DXe5ti9mLxYvV9lTvoAM'
 });
 
+Files.allow({
+	'insert': function(){
+		return true;
+	}
+});
+
+MeetingResource.allow({
+	'insert': function(){
+		return true;
+	}
+});
+
+Teacherss.allow({
+	'insert': function(){
+		return true;
+	}
+})
+
 Meteor.startup(function(){
+	//Server File Configuration
+	UploadServer.init({
+		tmpDir: process.env.PWD + '/.uploads/tmp',
+		uploadDir: process.env.PWD + '/.uploads/'
+	})
+
+
+	//Collection Initialization
 	if (Teachers.find().count() === 0){
 		console.log("adding teacher post");
 		Teachers.insert({content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"});
@@ -105,7 +131,24 @@ Meteor.startup(function(){
 	if (Topic2.find().count() === 0){
 		Topic2.insert({content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"});
 	}
-
+	if (Coaching.find().count() === 0){
+		Coaching.insert({content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"});
+	}
+	if (Profdev.find().count() === 0){
+		Profdev.insert({content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"});
+	}
+	if (Pdebate1.find().count() === 0){
+		Pdebate1.insert({content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"});
+	}
+	if (Evidence.find().count() === 0){
+		Evidence.insert({content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"});
+	}
+	if (Evidence2.find().count() === 0){
+		Evidence2.insert({content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"});
+	}
+	if (Meeting.find().count() === 0){
+		Meeting.insert({content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"});
+	}
 
 });
 Meteor.methods({
@@ -118,6 +161,11 @@ Meteor.methods({
 			from: from,
 			subject: subject,
 			text: text
+		});
+	},
+	deleteFile: function(file) {
+		Files.remove(file, function(err, file){
+			console.log("File successfully removed");
 		});
 	}
 });

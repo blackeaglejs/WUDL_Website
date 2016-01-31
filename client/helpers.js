@@ -16,6 +16,36 @@ Template.pictureupload.events({
 	}
 });
 
+Template.fileupload.events({
+	'submit form': function (e, t) {
+		e.preventDefault();
+		var file = $('#userfile')[0].files[0];
+		Files.insert(file, function(err, fileObj){
+			console.log("successfully uploaded!");
+		})
+	}
+});
+
+Template.fileuploadmeeting.events({
+	'submit form': function (e, t) {
+		e.preventDefault();
+		var file = $('#userfile')[0].files[0];
+		MeetingResource.insert(file, function(err, fileObj){
+			console.log("successfully uploaded!");
+		})
+	}
+});
+
+Template.fileuploadteacher.events({
+	'submit form': function (e, t) {
+		e.preventDefault();
+		var file = $('#userfile')[0].files[0];
+		Teacherss.insert(file, function(err, fileObj){
+			console.log("successfully uploaded!");
+		})
+	}
+});
+
 Template.topicresources.helpers({
 	topic1: function () {
 		return Topic1.findOne({});
@@ -27,18 +57,56 @@ Template.topicresources.helpers({
 Template.teachers.helpers({
 	teachers: function(){
 		return Teachers.findOne({});
+	},
+	teacherss: function(){
+		return Teacherss.find();
+	}
+});
+Template.meeting.helpers({
+	meeting: function () {
+		return Meeting.findOne({});
+	},
+	file: function() {
+		return MeetingResource.find();
 	}
 });
 
-Template.ProfessionalDevelopment.helpers({
-	professional_development: function(){
-		return professional_development.findOne({});
+Template.coachingresources.helpers({
+	coaching: function () {
+		return Coaching.findOne({});
+	},
+	file: function() {
+		return Files.find();
 	}
-})
+});
+
+Template.policydebate.helpers({
+	pdebate1: function () {
+		return Pdebate1.findOne({});
+	},
+	udldebate: function(){
+		return UDLDebate.findOne({});
+	}
+});
 
 Template.programming.helpers({
 	programming: function(){
 		return Programming.findOne({});
+	}
+});
+
+Template.professionaldevelopment.helpers({
+	profdev: function () {
+		return Profdev.findOne({});
+	}
+});
+
+Template.evidence.helpers({
+	evidence: function () {
+		return Evidence.findOne({});
+	},
+	evidence2: function () {
+		return Evidence2.findOne({});
 	}
 });
 

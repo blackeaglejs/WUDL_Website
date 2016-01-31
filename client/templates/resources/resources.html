@@ -1,30 +1,3 @@
-<template name="topicresources">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<h2>Topic Education</h2>
-				{{#if isAdmin}}
-		          {{> editableText collection='topic1' field='content' context=topic1 options=optionsHelper}}
-		        {{else}}
-		          {{{topic1.content}}}
-		        {{/if}}
-		        <img src="{{c.url "topic"}}" class="img img-responsive" id="topic">
-		        <br>
-		        {{#if isAdmin}}
-		          {{> editableText collection='topic2' field='content' context=topic2 options=optionsHelper}}
-		        {{else}}
-		          {{{topic2.content}}}
-		        {{/if}}
-		        <br>
-			</div>
-		</div>
-	</div>
-</template>
-
-<template name="evidence">
-	...
-</template>
-
 <template name="startteam">
 	<div class="container">
 		<div class="col-sm-8 col-sm-offset-2">
@@ -78,6 +51,150 @@
 	        <br>
 		</div>
 		<br>
+	</div>
+</template>
+
+<template name="topicresources">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h2>Topic Education</h2>
+				{{#if isAdmin}}
+		          {{> editableText collection='topic1' field='content' context=topic1 options=optionsHelper}}
+		        {{else}}
+		          {{{topic1.content}}}
+		        {{/if}}
+		        <img src="{{c.url "topic"}}" class="img img-responsive" id="topic">
+		        <br>
+		        {{#if isAdmin}}
+		          {{> editableText collection='topic2' field='content' context=topic2 options=optionsHelper}}
+		        {{else}}
+		          {{{topic2.content}}}
+		        {{/if}}
+		        <br>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="evidence">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h2>Evidence and Research</h2>
+				{{#if isAdmin}}
+		          {{> editableText collection='evidence' field='content' context=evidence options=optionsHelper}}
+		        {{else}}
+		          {{{evidence.content}}}
+		        {{/if}}
+		        <img src="{{c.url "evidence"}}" class="img img-responsive full-width">
+		        <br>
+		        {{#if isAdmin}}
+		          {{> editableText collection='evidence2' field='content' context=evidence2 options=optionsHelper}}
+		        {{else}}
+		          {{{evidence2.content}}}
+		        {{/if}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="policydebate">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h2>About Policy Debate</h2>
+				{{#if isAdmin}}
+		          {{> editableText collection='pdebate1' field='content' context=pdebate1 options=optionsHelper}}
+		        {{else}}
+		          {{{pdebate1.content}}}
+		        {{/if}}
+		        <br>
+		        <div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item full-width" src="//www.youtube.com/embed/9TVoPWu-fYw" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<br>
+				<h4>Why Policy Debate?</h4>
+				{{#if isAdmin}}
+		          {{> editableText collection='udldebate' field='content' context=udldebate options=optionsHelper}}
+		        {{else}}
+		          {{{udldebate.content}}}
+		        {{/if}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="professionaldevelopment">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h2>Professional Development</h2>
+				<img src="{{c.url "profdev"}}" class="img img-responsive" id="profdev">
+				<br>
+				{{#if isAdmin}}
+		          {{> editableText collection='profdev' field='content' context=profdev options=optionsHelper}}
+		        {{else}}
+		          {{{profdev.content}}}
+		        {{/if}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="coachingresources">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h2>Coaching Resources</h2>
+				{{#if isAdmin}}
+		          {{> editableText collection='coaching' field='content' context=coaching options=optionsHelper}}
+		        {{else}}
+		          {{{coaching.content}}}
+		        {{/if}}
+		        <br>
+		        <h3 style="color: black; text-align: left;">Files</h3>
+		        {{#if isAdmin}}
+		        	{{> fileupload}}
+		        {{/if}}
+		        <div class="well">
+		        	<div class="row">
+		        		{{#each file}}
+		        		<div class="col-sm-6" style="margin-bottom:5px;"><span style="font-weight: bold;">{{name}}</span>
+		        		<a href="{{url download=true}}" class="btn btn-primary">Download</a></div>
+		        		{{/each}}
+		        	</div>
+		        </div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="meeting">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h2>Meeting Resources</h2>
+				{{#if isAdmin}}
+		          {{> editableText collection='meeting' field='content' context=meeting options=optionsHelper}}
+		        {{else}}
+		          {{{meeting.content}}}
+		        {{/if}}
+		        <br>
+		        <h3 style="color: black; text-align: left;">Files</h3>
+		        {{#if isAdmin}}
+		        {{> fileuploadmeeting}}
+		        {{/if}}
+		        <div class="well">
+		        	<div class="row">
+		        		{{#each file}}
+		        		<div class="col-sm-6" style="margin-bottom:5px;"><span style="font-weight: bold;">{{name}}</span>
+		        		<a href="{{url download=true}}" class="btn btn-primary">Download</a></div>
+		        		{{/each}}
+		        	</div>
+		        </div>
+			</div>
+		</div>
 	</div>
 </template>
 

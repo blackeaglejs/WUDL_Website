@@ -4,3 +4,4 @@ Accounts.ui.config({
 $.cloudinary.config({
   cloud_name: 'dvztnrdqc'
 });
+

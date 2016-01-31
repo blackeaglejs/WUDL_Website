@@ -9,28 +9,30 @@
 		        {{{involve1.content}}}
 		    {{/if}}
 		    <br>
-		    <h4 style="color: black"><a href="/involvecoaching">Debate Coaching</a></h4>
+		    <h4 style="color: black">Debate Coaching</h4>
 		    {{#if isAdmin}}
 		        {{> editableText collection='involve2' field='content' context=involve2 options=optionsHelper}}
 		    {{else}}
 		        {{{involve2.content}}}
 		    {{/if}}
 		    <br>
-		    <h4 style="color: black"><a href="/involvejudging">Debate Judging</a></h4>
+		    <h4 style="color: black">Debate Judging</h4>
 		    {{#if isAdmin}}
 		        {{> editableText collection='involve3' field='content' context=involve3 options=optionsHelper}}
 		    {{else}}
 		        {{{involve3.content}}}
 		    {{/if}}
+
+		    
 		    <br>
-		    <h4 style="color: black"><a href="/involveexplore">Explore other debate activities</a></h4>
+		    <h4 style="color: black">Explore other debate activities</h4>
 		    {{#if isAdmin}}
 		        {{> editableText collection='involve4' field='content' context=involve4 options=optionsHelper}}
 		    {{else}}
 		        {{{involve4.content}}}
 		    {{/if}}
 		    <br>
-		    <h4 style="color: black"><a href="/involvedonor">Be a Donor!</a></h4>
+		    <h4 style="color: black">Be a Donor!</h4>
 		    {{#if isAdmin}}
 		        {{> editableText collection='involve5' field='content' context=involve5 options=optionsHelper}}
 		    {{else}}
@@ -38,26 +40,12 @@
 		    {{/if}}
 		    <br>
 		    {{> involvefooter}}
+		    <div class="embed-responsive embed-responsive-16by9"><iframe src="
+http://urbandebate.force.com/volunteers/GW_Volunteers__VolunteersJobListingFS?campaignId=701E0000000oZaJ&ShowCampaignHierarchy=1&monthstoshow=4" height="750" width="850" frameborder="0" scrolling="false"></iframe></div>
 		    <br>
   		</div>
   	</div>
   </div>
-</template>
-
-<template name="involvecoaching">
-	...
-</template>
-
-<template name="involvejudging">
-	...
-</template>
-
-<template name="involveexplore">
-	...
-</template>
-
-<template name="involvedonor">
-	...
 </template>
 
 <template name="involvefooter">

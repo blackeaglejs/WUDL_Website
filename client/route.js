@@ -14,9 +14,14 @@ Router.configure({
 		'tournaments': {to: 'tournaments'},
 		'udlmodel': {to: 'udlmodel'},
 		'camp': {to: 'camp'},
-		'ProfessionalDevelopment': {to: 'ProfessionalDevelopment'},
+		'professionaldevelopment': {to: 'professionaldevelopment'},
 		'startteam': {to: 'startteam'},
-		'topicresources': {to: 'topicresources'}
+		'topicresources': {to: 'topicresources'},
+		'coachingresources': {to: 'coachingresources'},
+		'meeting': {to: 'meeting'},
+		'policydebate': {to: 'policydebate'},
+		'evidence': {to: 'evidence'},
+		'results': {to: 'results'}
 	}
 });
 
