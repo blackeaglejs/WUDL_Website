@@ -7,6 +7,10 @@ body {
 	width: auto;
 }
 
+.owl-carousel .item img{
+	display: block;
+	width: 100%;
+}
 .nav-tabs > li {
     float:none;
     display:inline-block;

@@ -42,3 +42,4 @@ cfs:standard-packages
 cfs:gridfs
 cfs:filesystem
 cfs:dropbox
+richsilv:owl-carousel
