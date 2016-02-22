@@ -11,6 +11,14 @@ Template.addquote.events({
 	}
 });
 
+Template.impact.events({
+	'click .glyphicon-remove': function (e, t) {
+		e.preventDefault();
+
+    	ImpactQuote.remove({_id: ImpactQuote.findOne({quote: e.target.id})["_id"]});
+	}
+});
+
 Template.impact.onRendered(function(){
 	$('#side').height($('#main').height());
 });

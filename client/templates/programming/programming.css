@@ -2,3 +2,11 @@
   background-color: none;
   color: black;
 }
+
+.resultlist{
+	cursor: pointer;
+}
+
+.resultlist:hover{
+	text-decoration: underline;
+}

@@ -20,6 +20,18 @@ Teacherss.allow({
 	'insert': function(){
 		return true;
 	}
+});
+
+EvidenceFiles.allow({
+	'insert': function(){
+		return true;
+	}
+});
+
+ProfFiles.allow({
+	'insert': function(){
+		return true;
+	}
 })
 
 Meteor.startup(function(){

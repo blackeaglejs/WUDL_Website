@@ -94,6 +94,20 @@
 		        {{else}}
 		          {{{evidence2.content}}}
 		        {{/if}}
+		        <br>
+		        <h4>WUDL Evidence Zone</h4>
+		        {{#if isAdmin}}
+		        {{> fileuploadevidence}}
+		        {{/if}}
+
+		        <div class="well">
+		        	<div class="row">
+		        		{{#each evidences}}
+		        		<div class="col-sm-6" style="margin-bottom:5px;"><span style="font-weight: bold;">{{name}}</span>
+		        		<a href="{{url download=true}}" class="btn btn-primary">Download</a></div>
+		        		{{/each}}
+		        	</div>
+		        </div>
 			</div>
 		</div>
 	</div>
@@ -137,6 +151,21 @@
 		        {{else}}
 		          {{{profdev.content}}}
 		        {{/if}}
+
+		        <br>
+		        <h4>Resources</h4>
+		        {{#if isAdmin}}
+		        {{> fileuploadprof}}
+		        {{/if}}
+
+		        <div class="well">
+		        	<div class="row">
+		        		{{#each profdevfiles}}
+		        		<div class="col-sm-6" style="margin-bottom:5px;"><span style="font-weight: bold;">{{name}}</span>
+		        		<a href="{{url download=true}}" class="btn btn-primary">Download</a></div>
+		        		{{/each}}
+		        	</div>
+		        </div>
 			</div>
 		</div>
 	</div>

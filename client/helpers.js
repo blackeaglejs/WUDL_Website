@@ -36,11 +36,31 @@ Template.fileuploadmeeting.events({
 	}
 });
 
+Template.fileuploadevidence.events({
+	'submit form': function (e, t) {
+		e.preventDefault();
+		var file = $('#userfile')[0].files[0];
+		EvidenceFiles.insert(file, function(err, fileObj){
+			console.log("successfully uploaded!");
+		})
+	}
+});
+
 Template.fileuploadteacher.events({
 	'submit form': function (e, t) {
 		e.preventDefault();
 		var file = $('#userfile')[0].files[0];
 		Teacherss.insert(file, function(err, fileObj){
+			console.log("successfully uploaded!");
+		})
+	}
+});
+
+Template.fileuploadprof.events({
+	'submit form': function (e, t) {
+		e.preventDefault();
+		var file = $('#userfile')[0].files[0];
+		ProfFiles.insert(file, function(err, fileObj){
 			console.log("successfully uploaded!");
 		})
 	}
@@ -98,6 +118,9 @@ Template.programming.helpers({
 Template.professionaldevelopment.helpers({
 	profdev: function () {
 		return Profdev.findOne({});
+	},
+	profdevfiles: function() {
+		return ProfFiles.find();
 	}
 });
 
@@ -107,6 +130,9 @@ Template.evidence.helpers({
 	},
 	evidence2: function () {
 		return Evidence2.findOne({});
+	},
+	evidences: function() {
+		return EvidenceFiles.find();
 	}
 });
 

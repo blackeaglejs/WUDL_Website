@@ -21,6 +21,20 @@ var dropboxStore3 = new FS.Store.Dropbox("files3", {
   folder: "WUDLText", //optional, which folder (key prefix) to use 
 });
 
+var dropboxStore4 = new FS.Store.Dropbox("files4", {
+  key: "o0mx8wpdv30ushe",
+  secret: "5zz4g0mv8397yad",
+  token: "6TaHAQONRxkAAAAAAAAAn-RwJYnRtO1IqkXniBFLwkO-J-7abvTyn48rqa6UB5CJ", // Don’t share your access token with anyone.
+  folder: "WUDLText", //optional, which folder (key prefix) to use 
+});
+
+var dropboxStore5 = new FS.Store.Dropbox("files5", {
+  key: "o0mx8wpdv30ushe",
+  secret: "5zz4g0mv8397yad",
+  token: "6TaHAQONRxkAAAAAAAAAn-RwJYnRtO1IqkXniBFLwkO-J-7abvTyn48rqa6UB5CJ", // Don’t share your access token with anyone.
+  folder: "WUDLText", //optional, which folder (key prefix) to use 
+});
+
 //This is The Coaching Resource
 Files = new FS.Collection("files", {
   stores: [dropboxStore]
@@ -32,10 +46,21 @@ MeetingResource = new FS.Collection("files2", {
 
 Teacherss = new FS.Collection("files3", {
 	stores: [dropboxStore3]
-})
+});
+
+EvidenceFiles = new FS.Collection("files4", {
+  stores: [dropboxStore4]
+});
+
+ProfFiles = new FS.Collection('files5', {
+  stores: [dropboxStore5]
+});
 
 
 //Normal Mongo DBs
+
+ResultList = new Mongo.Collection('resultlist');
+
 Members = new Mongo.Collection('members');
 
 Teachers = new Mongo.Collection('teachers');

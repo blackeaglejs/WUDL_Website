@@ -7,6 +7,17 @@ body {
 	width: auto;
 }
 
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+
 .list-group li {
 	background-color: black;
 	text-align: center;
@@ -67,3 +78,13 @@ nav {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+
+#udltable td {
+	height: 50px;
+	border: 2px solid white;
+	font-size: 20px;
+	text-shadow: none;
+	color: white;
+	background-color: black;
+}
+
