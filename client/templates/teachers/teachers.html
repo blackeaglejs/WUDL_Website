@@ -51,17 +51,34 @@
         </div>
         <br>
       </div>
-      <div class="col-sm-3 pull-right" style="background-color: black; padding-bottom: 5px;" id="side">
-        <h3 style="text-decoration: underline">Files</h3>
+      <div class="col-sm-3 pull-right" style="background-color: black; padding-bottom: 5px; color: white;" id="side">
+        {{#each teacherquote}}
+                {{#if isAdmin}}
+                <button class="glyphicon glyphicon-remove" id='{{this.quote}}' style="color: black;"></button>
+                <br>
+                {{/if}}
+        {{>displayquote}}
+        {{/each}}
         {{#if isAdmin}}
-          {{> fileuploadteacher}}
+          {{>addquote2}}
         {{/if}}
-        <ul style="color: white;">
-          {{#each teacherss}}
-                <li><span class="glyphicon glyphicon-file"><a href="{{url download=true}}" style="color: white;">{{name}}</a></span></li>
-          {{/each}}
-        </ul>
       </div>
     </div>
+  </div>
+</template>
+
+<template name="addquote2">
+  <div class="well" style="color: black;">
+    <form>
+      <div class="form-group">
+        <label for="inputQuote">Quote</label>
+          <input type="text" class="form-control" id="inputQuote" placeholder="quote">
+      </div>
+      <div class="form-group">
+        <label for="inputAuthor">Author</label>
+          <input type="text" class="form-control" id="inputAuthor" placeholder="author">
+      </div>
+      <button type="submit" class="btn btn-default">Add To List</button>
+    </form>
   </div>
 </template>

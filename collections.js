@@ -59,6 +59,8 @@ ProfFiles = new FS.Collection('files5', {
 
 //Normal Mongo DBs
 
+TeacherQuote = new Mongo.Collection('teacherquote');
+
 ResultList = new Mongo.Collection('resultlist');
 
 Members = new Mongo.Collection('members');
