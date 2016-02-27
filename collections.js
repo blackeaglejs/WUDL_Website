@@ -75,7 +75,7 @@ Impact = new Mongo.Collection('impact');
 ImpactGraduation = new Mongo.Collection('impactgraduation');
 ImpactGrades = new Mongo.Collection('impactgrades');
 ImpactScores = new Mongo.Collection('impactscores');
-ImpactAttendance = new Mongo.Collection('impactattendace');
+ImpactAttendance = new Mongo.Collection('impactattendance');
 ImpactCollege = new Mongo.Collection('impactcollege');
 ImpactQuote = new Mongo.Collection('impactquote');
 
