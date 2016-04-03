@@ -1,8 +1,11 @@
 This is the Website for Washington Urban Debate League
 
-Demo Website: wudlwebsite.meteor.com
+Deployed Website: http://52.37.127.33/
 
 Tools Used:
 Bootstrap
+Meteor
+Cloudinary
+others
 
-Creators: Austin Bae, Zoheb Nensey
+Creator: Austin Bae
