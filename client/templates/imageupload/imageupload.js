@@ -9,6 +9,7 @@ Template.imageupload.events({
 		var files = [];
 		var file = $('#userimage')[0].files[0];
 		var name = $('#inputName').val();
+		var description = $('#inputDescription').val();
 		var photographer = $('#photographerName').val();
 		var tournament = $('#tournament').val();
 		var inpicture = $('inPicture').val();
