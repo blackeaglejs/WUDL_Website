@@ -2,28 +2,32 @@
   <div class="well well-lg">
     <form id="submitPicture">
       <div class="form-group">
+        <label for="inputName">Name</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Name">
+      </div>
+      <div class="form-group">
         <label for="inputDescription">Description</label>
         <input type="text" class="form-control" id="inputDescription" placeholder="Description">
       </div>
       <div class="form-group">
-        <label for="inputDescription">Taken By</label>
+        <label for="photographerName">Taken By</label>
         <input type="text" class="form-control" id="photographerName" placeholder="Photographer Name">
       </div>
       <div class="form-group">
-        <label for="inputCategory">Tournament</label>
+        <label for="tournament">Tournament</label>
         <input type="text" class="form-control" id="tournament" placeholder="">
       </div>
       <div class="form-group">
-        <label for="inputDescription">In Picture</label>
+        <label for="inPicture">In Picture</label>
         <input type="text" class="form-control" id="inPicture" placeholder="From L-R">
       </div>
       <div class="form-group">
-        <label for="inputOrientation">Portrait Orientation?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="checkOrientation">Portrait Orientation?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" id='checkOrientation'>
       </div>
       <div class="form-group">
-        <label for="inputOrientation">Include on Front Page?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="checkbox" id='checkOrientation'>
+        <label for="frontPage">Include on Front Page?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" id='frontPage'>
       </div>
       <input type="file" id="userimage" name="userimage"/>
       <button type="submit" class="btn btn-default">Submit</button>
