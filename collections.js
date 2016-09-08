@@ -120,6 +120,8 @@ Evidence2 = new Mongo.Collection('evidence2');
 
 Meeting = new Mongo.Collection('meeting');
 
+ImageInfo = new Mongo.Collection('imageinfo');
+
 
 
 

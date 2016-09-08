@@ -25,5 +25,15 @@ Template.imageupload.events({
     	}else{
     		frontpage = 'false';
     	}
+    	console.log(name + " " + photographer + "" + description + "" + tournament);
+    	files.push(file)
+    	console.log(file)
+    	ImageInfo.insert({name: name, 
+    					 description: description, 
+    					 photographer: photographer,
+    					 tournament: tournament,
+    					 inpicture: inpicture,
+    					 orientation: orientation,
+    					 frontpage: frontpage});
 	}
 })
