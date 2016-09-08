@@ -21,7 +21,8 @@ Router.configure({
 		'meeting': {to: 'meeting'},
 		'policydebate': {to: 'policydebate'},
 		'evidence': {to: 'evidence'},
-		'results': {to: 'results'}
+		'results': {to: 'results'},
+		'imageupload': {to: 'imageupload'}
 	}
 });
 
