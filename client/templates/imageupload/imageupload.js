@@ -20,12 +20,12 @@ Template.imageupload.events({
       		orientation = 'landscape';
     	}
     	var frontpage;
-    	if ($('frontPage').prop("checked")){
+    	if ($('#frontPage').prop("checked")){
     		frontpage = 'true';
     	}else{
     		frontpage = 'false';
     	}
-    	console.log(name + " " + photographer + "" + description + "" + tournament);
+    	console.log(name + " " + photographer + " " + description + " " + tournament);
     	files.push(file)
     	console.log(file)
     	ImageInfo.insert({name: name, 
